@@ -19,12 +19,12 @@ public class ReportDocument implements DocumentPrototype{
 
     @Override
     public void addSection(String section){
-        sections.add(section);
+        this.sections.add(section);
     }
 
     @Override
     public void removeSection(String section){
-        sections.remove(section);
+        this.sections.remove(section);
     }
 
     @Override
