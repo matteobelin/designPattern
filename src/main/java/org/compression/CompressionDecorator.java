@@ -1,13 +1,12 @@
 package org.compression;
 
-import lombok.RequiredArgsConstructor;
-
-@RequiredArgsConstructor
-public class CompressionDecorator implements FileComponent{
-    private final FileComponent fileComponent;
+public class CompressionDecorator extends Decorator{
+    public CompressionDecorator(FileComponent fileComponent) {
+        super(fileComponent);
+    }
 
     @Override
     public void sauvegarder(String contenu) {
-        fileComponent.sauvegarder("ZIP(" + contenu + ")");
+        super.sauvegarder("ZIP(" + contenu + ")");
     }
 }
